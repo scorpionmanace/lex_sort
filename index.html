@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        "use strict";
+        function sortLexicalOrder(elements,compareString){
+            if(!(elements instanceof Array) || elements === undefined){
+                console.log("please provide a valid array to do Lexical sort");
+                return;
+            }
+            elements.sort(function(a){
+                if(a.localeCompare(compareString))
+                    return 1;
+                else
+                    return -1;
+            });
+            return elements;
+        }
+        var input = ["acb", "abc", "bca"];
+        var str = "cba";
+        console.log(input , " " ,str);
+        console.log(sortLexicalOrder(input,str));
+    </script>
+</body>
+</html>
